@@ -1,0 +1,20 @@
+print("""
+
+Adivina la letra de la canción
+------------------------------------------------------------------------
+Music session BZRP feat Quevedo
+""")
+
+
+contador = 0
+while True:
+  print("se pintaba los ______ y la copa como espejo")
+  palabra=input("escribe la palabra que falta")
+  contador+=1
+  if palabra == "labios":
+    break
+  else: 
+    print("opción erronea, prueba otra vez")
+      
+print(
+   "muy bien, has acertado! lo has conseguido en", contador,"intentos")
