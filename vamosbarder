@@ -1,20 +1,38 @@
-print("""
+print("""Adivina las palabras de la letra de la canción
+--------------------------------------------""")
+print("""De Barcelona y con solo un ___________,
+Hasta que no quede ______, lo gritaremos al viento\nDesde pequeño, ser ________ es el _____,
+Con el coraje y ______, hasta el final de los tiempos
 
-Adivina la letra de la canción
-------------------------------------------------------------------------
-Music session BZRP feat Quevedo
-""")
+Uoooo oooh JIJANTES ______
+Uoooo oooh JIJANTES JIJANTES
+JIJANTES JIJANTES
+JIJANTES JIJANTES
 
+Sube las manos pa'rriba, todo el mundo a gritar
+Queremos a esta _________, com si fossim tots germans,
+____ y grana en el pecho, sé que hoy vamos a ganar
+Juntos no tenemos techo, no paremos de animar
 
+Uoooo oooh JIJANTES ________
+Uoooo oooh JIJANTES JIJANTES
+Uoooo oooh JIJANTES JIJANTES
+Uoooo oooh JIJANTES JIJANTES""")
+
+# Hago lista con palabras que deben ser adivinadas.
+palabras_a_adivinar = ["sentimiento", "aliento", "Jijante", "sueño", "empeño", "JIJANTES", "plantilla", "Blau", "animar", "JIJANTES"]
+
+#Hago contador para los intentos del usuario
 contador = 0
-while True:
-  print("se pintaba los ______ y la copa como espejo")
-  palabra=input("escribe la palabra que falta")
-  contador+=1
-  if palabra == "labios":
-    break
-  else: 
-    print("opción erronea, prueba otra vez")
-      
-print(
-   "muy bien, has acertado! lo has conseguido en", contador,"intentos")
+for palabra in palabras_a_adivinar:
+    while True:
+        letra = input("Escribe la palabra que falta: ")
+        contador += 1
+        if letra.lower() == palabra.lower():
+            print("¡Muy bien! Has acertado.")
+            break
+        else:
+            print("Opción incorrecta, prueba otra vez.")
+    
+print(f"¡Has acertado todas las palabras en", contador ," intentos! ¡Enhorabuena!")
+
